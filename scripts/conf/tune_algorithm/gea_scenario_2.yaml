@@ -1,0 +1,17 @@
+# @package _global_
+defaults:
+  - /gea_scenario_2
+  - _self_
+
+tune:
+  runs: 30
+  n_candidates: 30
+  seed: 0
+  ga_path: conf/gea_scenario_2.yaml
+  output_file: results/tune_algorithm_gea_scenario_2_${now:%Y%m%d_%H%M%S}.json
+  param_space:
+    crossover_rate: [0.4, 0.9]
+    mutation_rate: [0.1, 0.6]
+    dm_rate: [0.1, 0.6]
+    stagnation_limit: [10, 60]
+    immigrant_rate: [0.02, 0.3]

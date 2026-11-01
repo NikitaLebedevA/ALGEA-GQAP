@@ -1,0 +1,15 @@
+# @package _global_
+defaults:
+  - /sa
+  - _self_
+
+tune:
+  runs: 30
+  n_candidates: 30
+  seed: 0
+  ga_path: conf/sa.yaml
+  output_file: results/tune_algorithm_sa_${now:%Y%m%d_%H%M%S}.json
+  param_space:
+    initial_temperature: [10.0, 200.0]
+    cooling_rate: [0.90, 0.995]
+    min_temperature: [0.0001, 0.01]

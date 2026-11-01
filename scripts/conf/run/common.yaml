@@ -1,0 +1,9 @@
+# Run-loop settings shared by every algorithm config (standard.yaml, adaptive.yaml).
+runs: 30
+time_limit: 1000
+# Mirrors run_test.sbatch's NUM_WORKERS env var (set there alongside pinning
+# OMP/MKL/OPENBLAS/NUMEXPR to 1 thread each, so this multiprocessing pool is the only
+# thing using all the allocated cores). Falls back to 4 for ad-hoc local runs.
+workers: ${oc.env:NUM_WORKERS,5}
+# Derived from ga._target_ via the algo_label resolver registered in run.py.
+output_file: results/${algo_label:${ga._target_}}.json

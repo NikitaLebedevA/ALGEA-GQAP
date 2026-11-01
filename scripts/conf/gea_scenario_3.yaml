@@ -1,0 +1,20 @@
+defaults:
+  - datasets: common
+  - components@ga: common
+  - run: common
+  - hydra: common
+  - _self_
+
+run:
+  output_file: results/gea_scenario_3.json
+
+ga:
+  _target_: src.algos.gea.ImprovedGEAScenario3
+  population_size: 350
+  iterations: 1000
+  crossover_rate: 0.8969512890268935
+  mutation_rate: 0.5766510907020117
+  injection_rate: 0.05790045927169336
+  stagnation_limit: 10
+  immigrant_rate: 0.29829738093915237
+  verbose: false

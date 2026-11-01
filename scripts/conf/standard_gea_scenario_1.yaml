@@ -1,0 +1,17 @@
+defaults:
+  - datasets: common
+  - run: common
+  - hydra: common
+  - _self_
+
+run:
+  output_file: results/standard_gea_scenario_1.json
+
+ga:
+  _target_: src.algos.gea.StandardGEAScenario1
+  population_size: 350
+  iterations: 1000
+  crossover_rate: 0.6254706108973966
+  mutation_rate: 0.5173991834198135
+  rc_rate: 0.533133892897716
+  verbose: false

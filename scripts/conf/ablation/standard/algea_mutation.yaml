@@ -1,0 +1,6 @@
+# @package _global_
+defaults:
+  - /standard_adaptive_gea@_global_
+  - _self_
+run: {output_file: results/ablation/standard_algea_mutation_fixed.json}
+ga: {fixed_operators: [mutation]}

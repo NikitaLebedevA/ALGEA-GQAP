@@ -1,0 +1,7 @@
+# Hydra's own run-directory settings, shared by every algorithm config (standard.yaml,
+# adaptive.yaml): keep everything in the current directory instead of Hydra's default
+# timestamped output dir + chdir.
+run:
+  dir: .
+job:
+  chdir: false

@@ -1,0 +1,19 @@
+defaults:
+  - datasets: common
+  - run: common
+  - hydra: common
+  - _self_
+
+run:
+  output_file: results/standard_hybrid_ga_sa.json
+
+ga:
+  _target_: src.algos.hybrid.StandardHybridGASA
+  population_size: 350
+  iterations: 1000
+  crossover_rate: 0.8925006266090938
+  mutation_rate: 0.5983866545994556
+  initial_temperature: 198.8446513515677
+  cooling_rate: 0.9384704843359473
+  min_temperature: 0.009791972652820858
+  verbose: false

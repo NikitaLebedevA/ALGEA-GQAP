@@ -1,0 +1,17 @@
+# @package _global_
+defaults:
+  - /adaptive_gea_scenario_1
+  - _self_
+
+tune:
+  runs: 30
+  n_candidates: 30
+  seed: 0
+  ga_path: conf/adaptive_gea_scenario_1.yaml
+  output_file: results/tune_algorithm_adaptive_gea_scenario_1_${now:%Y%m%d_%H%M%S}.json
+  param_space:
+    alpha: [0.001, 0.05]
+    lambda_min: [0.05, 0.3]
+    lambda_max: [0.7, 0.95]
+    stagnation_limit: [10, 60]
+    immigrant_rate: [0.02, 0.3]

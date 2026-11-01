@@ -1,0 +1,19 @@
+defaults:
+  - datasets: common
+  - run: common
+  - hydra: common
+  - _self_
+
+run:
+  output_file: results/standard_gea.json
+
+ga:
+  _target_: src.algos.gea.StandardGEA
+  population_size: 350
+  iterations: 1000
+  crossover_rate: 0.8924590155953668
+  mutation_rate: 0.5969475133593413
+  rc_rate: 0.497567687055932
+  dm_rate: 0.10150148905202014
+  injection_rate: 0.29474678416214284
+  verbose: false

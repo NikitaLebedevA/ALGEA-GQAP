@@ -1,0 +1,13 @@
+defaults:
+  - datasets: common
+  - run: common
+  - hydra: common
+  - _self_
+
+ga:
+  _target_: src.algos.ga.StandardGA
+  population_size: 350
+  iterations: 1000
+  crossover_rate: 0.8094380326937618
+  mutation_rate: 0.04680355949423387
+  verbose: false

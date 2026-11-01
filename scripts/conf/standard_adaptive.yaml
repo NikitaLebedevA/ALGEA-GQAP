@@ -1,0 +1,21 @@
+defaults:
+  - datasets: common
+  - run: common
+  - hydra: common
+  - _self_
+
+run:
+  output_file: results/standard_adaptive.json
+
+ga:
+  _target_: src.algos.adaptive.StandardAdaptiveGA
+  population_size: 350
+  iterations: 1000
+  crossover_rate: 0.8708708889922567
+  mutation_rate: 0.597477405673311
+  alpha: 0.009801927028492408
+  lambda_min: 0.1
+  lambda_max: 0.9
+  reward_horizon: 10
+  epsilon: 1e-5
+  verbose: false

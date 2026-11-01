@@ -1,0 +1,15 @@
+# Repair and selection strategies shared by every algorithm config that builds on GEA's
+# enhancements (gea.yaml, adaptive.yaml, etc.), merged directly into their `ga` node via
+# the `components@ga` default. standard.yaml (the textbook Holland GA baseline) doesn't
+# use these -- it has no diversity selector and uses plain GreedyRepair.
+repair_class:
+  _target_: src.repair.RFRepair
+  tol: 1e-9
+  subsample_size: 0.6470290648202681
+
+selector:
+  _target_: src.selection.DiversitySelector
+  beta: 18.414511817358562
+  diversity_weight_start: 0.6588363576696207
+  diversity_weight_end: 0.16752652975268725
+  elite_fraction: 0.4625732352513558

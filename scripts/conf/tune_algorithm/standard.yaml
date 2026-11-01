@@ -1,0 +1,14 @@
+# @package _global_
+defaults:
+  - /standard
+  - _self_
+
+tune:
+  runs: 30
+  n_candidates: 30
+  seed: 0
+  ga_path: conf/standard.yaml
+  output_file: results/tune_algorithm_standard_${now:%Y%m%d_%H%M%S}.json
+  param_space:
+    crossover_rate: [0.4, 0.9]
+    mutation_rate: [0.001, 0.05]

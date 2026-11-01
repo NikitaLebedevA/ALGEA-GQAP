@@ -1,0 +1,17 @@
+defaults:
+  - datasets: common
+  - run: common
+  - hydra: common
+  - _self_
+
+run:
+  output_file: results/standard_sa.json
+
+ga:
+  _target_: src.algos.sa.StandardSA
+  population_size: 1
+  iterations: 1000
+  initial_temperature: 194.89569674489042
+  cooling_rate: 0.9445885285679331
+  min_temperature: 0.002985663916586654
+  verbose: false

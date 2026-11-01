@@ -1,0 +1,17 @@
+defaults:
+  - datasets: common
+  - run: common
+  - hydra: common
+  - _self_
+
+run:
+  output_file: results/standard_pso.json
+
+ga:
+  _target_: src.algos.pso.StandardParticleSwarm
+  population_size: 350
+  iterations: 1000
+  inertia_weight: 0.5067528830285765
+  cognitive_weight: 0.10153099605463807
+  social_weight: 0.42322470712713445
+  verbose: false

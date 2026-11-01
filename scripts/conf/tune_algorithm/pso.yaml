@@ -1,0 +1,17 @@
+# @package _global_
+defaults:
+  - /pso
+  - _self_
+
+tune:
+  runs: 30
+  n_candidates: 30
+  seed: 0
+  ga_path: conf/pso.yaml
+  output_file: results/tune_algorithm_pso_${now:%Y%m%d_%H%M%S}.json
+  param_space:
+    inertia_weight: [0.1, 0.6]
+    cognitive_weight: [0.1, 0.5]
+    social_weight: [0.1, 0.5]
+    stagnation_limit: [10, 60]
+    immigrant_rate: [0.02, 0.3]

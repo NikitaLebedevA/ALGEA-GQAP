@@ -1,0 +1,20 @@
+defaults:
+  - datasets: common
+  - run: common
+  - hydra: common
+  - _self_
+
+run:
+  output_file: results/standard_hybrid_ga_pso.json
+
+ga:
+  _target_: src.algos.hybrid.StandardHybridGAPSO
+  population_size: 350
+  iterations: 1000
+  pso_fraction: 0.21326364470056852
+  inertia_weight: 0.1027984140481237
+  cognitive_weight: 0.4803809548068436
+  social_weight: 0.40550791336578246
+  crossover_rate: 0.8900447840094429
+  mutation_rate: 0.28795644214557603
+  verbose: false

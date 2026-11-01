@@ -1,0 +1,22 @@
+defaults:
+  - datasets: common
+  - run: common
+  - hydra: common
+  - _self_
+
+run:
+  output_file: results/standard_adaptive_gea_scenario_3.json
+
+ga:
+  _target_: src.algos.adaptive.StandardAdaptiveGEAScenario3
+  population_size: 350
+  iterations: 1000
+  crossover_rate: 0.7119312779954151
+  mutation_rate: 0.5376631237490226
+  injection_rate: 0.2579589358921035
+  alpha: 0.0010994444460392775
+  lambda_min: 0.1
+  lambda_max: 0.9
+  reward_horizon: 10
+  epsilon: 1e-5
+  verbose: false

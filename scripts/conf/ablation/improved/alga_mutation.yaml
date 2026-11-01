@@ -1,0 +1,6 @@
+# @package _global_
+defaults:
+  - /adaptive@_global_
+  - _self_
+run: {output_file: results/ablation/improved_alga_mutation_fixed.json}
+ga: {fixed_operators: [mutation]}
